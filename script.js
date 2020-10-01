@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div');
     const scoreDisplay = document.querySelector('span');
     const startBtn = document.querySelector('.start');
+    const container = document.querySelector('.container');
 
     const width =10;
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSnake = [2,1,0];
         currentIndex = 0;
         currentSnake.forEach (index => squares[index].classList.add('snake'));
+        container.style.backgroundColor = "lightblue";
         interval =setInterval(moveOutcomes, intervalTime);
 
     }
@@ -47,7 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
             squares[currentSnake[0] + direction].classList.contains('snake')        // hits itself
             
             ){
+                container.style.backgroundColor = "red";
+                setTimeout(function(){ alert("Try Again!"); }, 100);
                 return clearInterval(interval); // clear interval if hit
+                
         }
 
         const tail = currentSnake.pop();            // removes last square from snake array and shows it

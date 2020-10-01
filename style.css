@@ -1,14 +1,39 @@
+body{
+    margin: 0;
+}
+
+.container{
+   
+    width: 600px;
+    height: 600px;
+    padding-top: 1em;
+    background-color: lightblue;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+    
+}
+
 .grid{
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
+    border-radius: 8px;
+    margin-top: 1em;
     display: flex;
     flex-wrap: wrap;
-    border-style:  solid;
+    border-style:  double;
+    border-color: gray;
+    background-color: aliceblue;
+      
 }
 
 .grid div {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
 .snake {
@@ -17,4 +42,13 @@
 
 .apple{
     background-color: green;
+}
+
+button{
+    font-size: 1em;
+    margin-top: 1em;
+    padding: 5px;
+    border-radius: 30px;
+    width: 110px;
+    background-color: orange;
 }
