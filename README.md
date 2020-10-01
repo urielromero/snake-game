@@ -31,5 +31,5 @@ Main functions used to create this game:
 • setTimeout()
 • pop()
 • push() 
-• unshift() 
+• unshift()
 
